@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Elka</string>
+    <string name="btn_inv">INV</string>
+    <string name="btn_deg">DEG</string>
+    <string name="btn_rad">RAD</string>
+    <string name="btn_sin">sin</string>
+    <string name="btn_arc_sin">sin<sup><small>-1</small></sup></string>
+    <string name="btn_cos">cos</string>
+    <string name="btn_arc_cos">cos<sup><small>-1</small></sup></string>
+    <string name="btn_tan">tan</string>
+    <string name="btn_arc_tan">tan<sup><small>-1</small></sup></string>
+    <string name="btn_plus_minus">+/-</string>
+    <string name="btn_In">In</string>
+    <string name="btn_In_to_e_x">e<sup><small>x</small></sup></string>
+    <string name="btn_log">log</string>
+    <string name="btn_log_to_10_x">10<sup><small>x</small></sup></string>
+    <string name="btn_period">!</string>
+    <string name="btn_caret">^</string>
+    <string name="btn_pi">&#960;</string>
+    <string name="btn_e">e</string>
+    <string name="btn_left_bracket">(</string>
+    <string name="btn_right_bracket">)</string>
+    <string name="btn_square_root">&#8730;</string>
+    <string name="btn_square_root_to_x_2">X<sup><small>2</small></sup></string>
+    <string name="btn_c">C</string>
+    <string name="btn_erase">&#9003;</string>
+    <string name="btn_percent">%</string>
+    <string name="btn_divide">÷</string>
+    <string name="btn_seven">7</string>
+    <string name="btn_eight">8</string>
+    <string name="btn_nine">9</string>
+    <string name="btn_multiply">x</string>
+    <string name="btn_four">4</string>
+    <string name="btn_five">5</string>
+    <string name="btn_six">6</string>
+    <string name="btn_plus">+</string>
+    <string name="btn_minus">-</string>
+    <string name="btn_one">1</string>
+    <string name="btn_two">2</string>
+    <string name="btn_three">3</string>
+    <string name="btn_zero">0</string>
+    <string name="btn_dot">.</string>
+    <string name="btn_equals">=</string>
+    <string name="unit_converter">Unit converter</string>
+    <string name="currency_converter">Currency converter</string>
+    <string name="history">History</string>
+</resources>

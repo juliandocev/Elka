@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tv_input_text_size">50sp</dimen>
+    <dimen name="tv_input_padding">10dp</dimen>
+    <dimen name="tv_output_text_size">30sp</dimen>
+    <dimen name="btn_text_size">28sp</dimen>
+    <dimen name="btn_plus_text_size">22sp</dimen>
+</resources>

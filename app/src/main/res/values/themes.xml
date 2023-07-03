@@ -1,0 +1,73 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Elka" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="btn_round" parent="@android:style/Widget.Button" >
+        <item name="android:background">@drawable/btn_round</item>
+        <item name="android:clickable">false</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="layout_columnWeight">1</item>
+        <item name="layout_rowWeight">1</item>
+    </style>
+    <style name="btn_round_unit_converter" parent="@android:style/Widget.Button" >
+        <item name="android:background">@drawable/btn_round_unit_converter</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="layout_columnWeight">1</item>
+        <item name="layout_rowWeight">1</item>
+    </style>
+
+    <style name="btn_round_currency_converter" parent="@android:style/Widget.Button" >
+        <item name="android:background">@drawable/btn_round_currency_converter</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="layout_columnWeight">1</item>
+        <item name="layout_rowWeight">1</item>
+    </style>
+
+    <style name="btn_round_history" parent="@android:style/Widget.Button" >
+        <item name="android:background">@drawable/btn_round_history</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="layout_columnWeight">1</item>
+        <item name="layout_rowWeight">1</item>
+    </style>
+
+    <style name="btn_scientific_row" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/dark_primary_text</item>
+        <item name="android:background">@drawable/btn_scientific</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="layout_columnWeight">1</item>
+        <item name="layout_rowWeight">1</item>
+    </style>
+
+    <style name="btn_numbers_row" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/dark_primary_text</item>
+        <item name="android:background">@drawable/btn_number</item>
+
+    </style>
+    <style name="btn_numbers_row_orange" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/dark_primary_text</item>
+        <item name="android:background">@drawable/btn_number_orange</item>
+
+    </style>
+</resources>
