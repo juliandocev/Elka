@@ -7,6 +7,9 @@
     android:orientation="vertical"
     android:weightSum="13"
     tools:context=".MainActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
 
     <TextView
         android:id="@+id/tv_expression"
@@ -100,7 +103,7 @@
                 style="@style/btn_scientific_row" />
             <Button
                 android:id="@+id/btn_deg_rad"
-                android:text="@string/btn_deg"
+                android:text="@string/btn_rad"
                 android:textSize="@dimen/btn_text_size"
                 app:layout_columnWeight="1"
                 app:layout_rowWeight="1"
@@ -142,8 +145,8 @@
                 app:layout_gravity="fill_horizontal"
                 style="@style/btn_scientific_row"/>
             <Button
-                android:id="@+id/btn_in"
-                android:text="@string/btn_In"
+                android:id="@+id/btn_ln"
+                android:text="@string/btn_ln"
                 android:textSize="@dimen/btn_text_size"
                 app:layout_columnWeight="1"
                 app:layout_rowWeight="1"

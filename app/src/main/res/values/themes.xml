@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Elka" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style name="Theme.Elka" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -69,5 +69,10 @@
         <item name="android:textColor">@color/dark_primary_text</item>
         <item name="android:background">@drawable/btn_number_orange</item>
 
+    </style>
+    <style name="ThemeOverlay.toolbar_menu" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:background">@drawable/toolbar_menu_background</item>
+        <item name="android:textColor">@color/dark_primary_text</item>
     </style>
 </resources>

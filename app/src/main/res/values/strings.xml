@@ -10,8 +10,8 @@
     <string name="btn_tan">tan</string>
     <string name="btn_arc_tan">tan<sup><small>-1</small></sup></string>
     <string name="btn_plus_minus">+/-</string>
-    <string name="btn_In">In</string>
-    <string name="btn_In_to_e_x">e<sup><small>x</small></sup></string>
+    <string name="btn_ln">ln</string>
+    <string name="btn_ln_to_e_x">e<sup><small>x</small></sup></string>
     <string name="btn_log">log</string>
     <string name="btn_log_to_10_x">10<sup><small>x</small></sup></string>
     <string name="btn_period">!</string>
@@ -44,4 +44,5 @@
     <string name="unit_converter">Unit converter</string>
     <string name="currency_converter">Currency converter</string>
     <string name="history">History</string>
+    <string name="toolbar_item_settings">Settings</string>
 </resources>

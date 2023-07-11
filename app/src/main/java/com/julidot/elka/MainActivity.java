@@ -1,18 +1,24 @@
 package com.julidot.elka;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import com.julidot.elka.databinding.ActivityMainBinding;
 
@@ -48,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         View view = binding.getRoot();
         setContentView(view);
 
+        // Set the toolbar as an ActionBar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         initiateOnCLickListeners();
 
         // Slide panel to show/hide scientific btns
@@ -55,6 +65,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new AnchorTouchListener(binding.llBtns));
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.toolbar_menu, menu);
+        return true;
+    }
+
+    //TODO We use it to select options in the menu
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -97,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 onSpecialButtonClick(v);
 
                 break;
-            case R.id.btn_in:
+            case R.id.btn_ln:
                 onSpecialButtonClick(v);
 
                 break;
@@ -222,23 +246,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void onDegRadClick(View v)
     {
+        Toolbar toolbar = findViewById(R.id.toolbar);
         if(((Button)v).getText().toString().equals(this.getString(R.string.btn_deg) )){
             binding.btnDegRad.setText(this.getString(R.string.btn_rad));
+            toolbar.setTitle(R.string.btn_deg);
+
         }else{
             binding.btnDegRad.setText(this.getString(R.string.btn_deg));
+            toolbar.setTitle(R.string.btn_rad);
         }
+        calculate();
     }
 
     /** INV button toggle */
     private void onInvClick(View v) {
-        if(binding.btnSin.getText().toString().equals("sin")){
+        if(binding.btnSin.getText().toString().equals("sin")){// It is not necessary to survey the sin. it can be cos, tan...
             binding.btnSin.setText(R.string.btn_arc_sin);
             binding.btnCos.setText(R.string.btn_arc_cos);
             binding.btnTan.setText(R.string.btn_arc_tan);
+            binding.btnLn.setText(R.string.btn_ln_to_e_x);
         }else{
             binding.btnSin.setText(R.string.btn_sin);
             binding.btnCos.setText(R.string.btn_cos);
             binding.btnTan.setText(R.string.btn_tan);
+            binding.btnLn.setText(R.string.btn_ln);
         }
 
     }
@@ -323,17 +354,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case "+/-":
-                onPlusMinusClick(binding.tvExpression.getText().toString());
+                if(!binding.tvExpression.getText().toString().isEmpty()){
+                    onPlusMinusClick(binding.tvExpression.getText().toString());
+                }
+
 
                 break;
 
-            case "In":
-                binding.tvExpression.append("sin(");
+            case "ln":
+                binding.tvExpression.append("ln(");
 
                 break;
+
+            case "ex":
+                binding.tvExpression.append("exp(");
+
+                break;
+
 
             case "log":
-                binding.tvExpression.append("sin(");
+                binding.tvExpression.append("log(");
 
                 break;
 
@@ -548,7 +588,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             // expression =  new ExpressionBuilder(txt).build();
             expression =  new Expression(txt);
-            boolean isDegMod = binding.btnDegRad.getText().toString().equals(this.getString(R.string.btn_deg));
+            boolean isDegMod = ((Toolbar)findViewById(R.id.toolbar)).getTitle().toString().equals(this.getString(R.string.btn_deg));
             if (isDegMod) {
                 mXparser.setDegreesMode();
             } else {
@@ -612,7 +652,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.btnCos.setOnClickListener(this);
         binding.btnTan.setOnClickListener(this);
         binding.btnPlusMinus.setOnClickListener(this);
-        binding.btnIn.setOnClickListener(this);
+        binding.btnLn.setOnClickListener(this);
         binding.btnLog.setOnClickListener(this);
         binding.btnPeriod.setOnClickListener(this);
         binding.btnPlusCaret.setOnClickListener(this);
