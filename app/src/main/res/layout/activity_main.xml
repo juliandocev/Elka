@@ -72,11 +72,9 @@
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
             style="@style/btn_round" />
-
-
-
-
     </androidx.gridlayout.widget.GridLayout>
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -222,10 +220,8 @@
                 app:layout_gravity="fill_horizontal"
                 style="@style/btn_scientific_row"/>
 
-
-
-
         </androidx.gridlayout.widget.GridLayout>
+
         <LinearLayout
             android:id="@+id/ll_btns"
             android:layout_width="match_parent"

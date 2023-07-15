@@ -16,11 +16,11 @@
     <string name="btn_log_to_10_x">10<sup><small>x</small></sup></string>
     <string name="btn_period">!</string>
     <string name="btn_caret">^</string>
-    <string name="btn_pi">&#960;</string>
+    <string name="btn_pi">π</string>
     <string name="btn_e">e</string>
     <string name="btn_left_bracket">(</string>
     <string name="btn_right_bracket">)</string>
-    <string name="btn_square_root">&#8730;</string>
+    <string name="btn_square_root">√</string>
     <string name="btn_square_root_to_x_2">X<sup><small>2</small></sup></string>
     <string name="btn_c">C</string>
     <string name="btn_erase">&#9003;</string>
@@ -45,4 +45,5 @@
     <string name="currency_converter">Currency converter</string>
     <string name="history">History</string>
     <string name="toolbar_item_settings">Settings</string>
+
 </resources>
